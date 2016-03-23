@@ -39,7 +39,7 @@ Func GetResources($bLog = True, $pMatchMode = -1) ;Reads resources
 			EndIf
 			Return
 		EndIf
-		If $debugSetlog = 1 Then SetLog("Loop to clean screen without Clouds , nº :" & $i, $COLOR_PURPLE)
+		If $debugSetlog = 1 Then SetLog("Loop to clean screen without Clouds , nÂº :" & $i, $COLOR_PURPLE)
 	WEnd
 
     SuspendAndroid()
@@ -56,9 +56,9 @@ Func GetResources($bLog = True, $pMatchMode = -1) ;Reads resources
 	If _Sleep($iDelayRespond) Then Return
 	$searchElixir = getElixirVillageSearch(48, 69 + 29)
 	If _Sleep($iDelayRespond) Then Return
-	If _ColorCheck(_GetPixelColor(30, 142, True), Hex(0x07010D, 6), 10) Then ; check if the village have a Dark Elixir Storage
-		$searchDark = getDarkElixirVillageSearch(48, 69 + 57)
-		$searchTrophy = getTrophyVillageSearch(48, 69 + 99)
+	If _ColorCheck(_GetPixelColor(31, 144, True), Hex(0x000000, 6), 10) Then ; check if the village have a Dark Elixir Storage
+		$searchDark = getDarkElixirVillageSearch(48, 128)
+		$searchTrophy = getTrophyVillageSearch(48, 170)
 	Else
 		$searchDark = "N/A"
 		$searchTrophy = getTrophyVillageSearch(48, 69 + 69)
